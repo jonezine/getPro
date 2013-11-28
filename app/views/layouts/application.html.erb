@@ -3,13 +3,47 @@
 <head>
   <title>Getpro</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!--HEADER-->
+<div id="header">
 
+  <div id="subheader">
+    <a href="#">
+      <div id="applogo" class="subheadercontent">
+        <h1 id="title" class="subheadercontent">getPRO!</h1>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div id="main">
+  <div id="mainpage" class="maincontent">
 <%= yield %>
+  </div>
+</div>
 
+<!--FOOTER-->
+<div id="footer">
+  <div id="subfooter">
+    <div id="footerdaweb" class="subfootercontent">
+      <ul id="subfootertitle">
+        <li>Let´s Get Pro!</li>
+        <li><a href="http://ctp.di.fct.unl.pt/lei/daweb/">DaWeb 2013/2014</a></li>
+      </ul>
+    </div>
+    <div id="footerother" class="subfootercontent">
+      <ul id="subfooterother">
+        <li>More</li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <a id="footervalidator" class="subfootercontent" href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="W3Validate"/></a>
+  </div>
+</div>
 
 </body>
 </html>
