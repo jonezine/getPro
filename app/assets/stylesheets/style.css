@@ -90,7 +90,7 @@ body{
     margin: 20px 0;
 }
 
-.button{
+.button, input[type="submit"]{
     padding: 5px 10px;
     border: 1px solid transparent;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
@@ -98,11 +98,12 @@ body{
     font-size: 100%;
     background: #6aa001;
     color: white;
+    font-weight: bold;
     margin: 10px 0;
 }
-.button:hover{ background: #5e8c00; }
+.button:hover, input[type="submit"]:hover{ background: #5e8c00; }
 
-#mainpage a.button{ color: white; text-decoration: none; font-weight: bold; }
+#mainpage a.button{ color: white; text-decoration: none; font-weight: bold;  }
 
 table, tbody, thead, th, td{ padding: 5px; }
 table{ border: dotted silver 1px; }
