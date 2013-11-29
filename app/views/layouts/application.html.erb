@@ -3,8 +3,9 @@
 <head>
   <title>getPro - <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag "script" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,8 +18,39 @@
         <h1 id="title" class="subheadercontent">getPRO!</h1>
       </div>
     </a>
+
+      <ul id="menu" class="subheadercontent">
+        <li class="menuli not_login"><%= link_to "Companies", companies_path %></li>
+        <li class="menuli" id="login">
+          <% if user_signed_in? %>
+              <%= current_user.email %>
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          <% else %>
+              <%= link_to "Sign in", new_user_session_path %>
+          <% end %>
+          <form id="loginform">
+            <div id="loginformmain">
+              <div id="emailfield" class="loginformmaincontent">
+                <!--<label id="emaillabel">Email</label>-->
+                <input type="email" name="loginemail" id="loginemail" placeholder="Email">
+              </div>
+              <div id="passwordfield" class="loginformmaincontent">
+                <!--<label id="passwordlabel">Password</label>-->
+                <input type="password" name="loginpassword" id="loginpassword" placeholder="Password">
+              </div>
+              <div id="loginsubmit" class="loginformmaincontent">
+                <input class="button" id="loginbutton"      name="loginbutton"      value="Login"       type="submit">
+                <input class="button" id="registerbutton"   name="registerbutton"   value="Register"    type="submit">
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+
   </div>
 </div>
+
+
 
 <div id="main">
   <div id="mainpage" class="maincontent">
@@ -41,9 +73,10 @@
         <li><%= link_to( "About us" , "/static_pages/aboutus.html" )%></li>
       </ul>
     </div>
-    <a id="footervalidator" class="subfootercontent" href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="W3Validate"/></a>
+    <a id="footervalidator" href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="W3Validate"/></a>
   </div>
 </div>
-
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 </body>
 </html>
