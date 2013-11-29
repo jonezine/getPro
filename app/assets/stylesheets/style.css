@@ -6,7 +6,7 @@ body, ul, li, h1, h2{
 ul{ list-style-type: none;}
 
 /*Default style for links*/
-a{ color: dimgrey; }
+a{ color: dimgrey; transition: 0.2s;}
 a:hover{ color: #5C9101; background: none; }
 
 /*CUSTOM FONTS TO CSS------------*/
@@ -29,6 +29,19 @@ body{
     font-family: 'proxima-nova', sans-serif;
     font-size: 110%;
     background: whitesmoke url("/assets/background.png");
+}
+
+/*Generic input format*/
+input[type="text"], input[type="email"], input[type="password"]{
+    padding: 10px ;
+    border: 1px solid silver;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
+    font-family: 'proxima-nova', sans-serif;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    box-shadow: 0 0 3px #a3ff01;
+    border: 1px solid #5C9101;
 }
 
 /*HEADER---------------------------------------------------------------------------------------------------------------*/
@@ -65,6 +78,7 @@ body{
 #applogo{
     margin-left: 20px;
     float: left;
+    transition: 0.2s;
 }
 
 #applogo:hover{
@@ -73,12 +87,15 @@ body{
 
 #menu{
     float: right;
+    display:inline-table;
+    position: relative;
 }
 
 .menuli{
     float:left;
     display: inline-block;
-    font-size: 110%;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
 .menuli:hover{
@@ -88,8 +105,6 @@ body{
 .menuli > a{
     color: white;
     text-decoration: none;
-    height:auto;
-    line-height: 60px;
     padding: 20px 10px;
 }
 
@@ -101,6 +116,18 @@ body{
 #login:hover{
     color: white;
     background: #477000;
+}
+
+#loginform{
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.40);
+    margin: auto;
+    padding: 10px;
+    background: #477000 url(/assets/background.png);
+    line-height: 20px;
+    position: absolute;
+    right: 0%;
+    font-weight: normal;
+    width: 350px;
 }
 
 
@@ -123,8 +150,13 @@ body{
     margin: 20px 0;
 }
 
-#welcometext{ font-family: 'proxima-nova'; font-size: 80px; font-weight: 300; text-align: center; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);  )
+#welcometext{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
 
 
 .button, input[type="submit"]{
@@ -135,12 +167,12 @@ body{
     font-size: 100%;
     background: #6aa001;
     color: white;
-    font-weight: bold;
+    /*font-weight: bold;*/
     margin: 10px 0;
 }
 .button:hover, input[type="submit"]:hover{ background: #5e8c00; }
 
-#mainpage a.button{ color: white; text-decoration: none; font-weight: bold;  }
+a.button{ color:white; text-decoration: none; }
 
 table, tbody, thead, th, td{ padding: 5px; }
 table{ border: dotted silver 1px; }
@@ -165,5 +197,7 @@ table{ border: dotted silver 1px; }
     /*border-left: rgba(92, 145, 1, 0.60) solid 5px;*/
     border-radius: 5px;
 }
+
+.subfootercontent a{ text-decoration: none; }
 
 #footervalidator{ float:right; line-height: 100px; margin: 0 20px;}

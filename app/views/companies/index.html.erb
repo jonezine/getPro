@@ -28,6 +28,14 @@
   </tbody>
 </table>
 
+<% @companies.each do |company| %>
+<div class="entitypreview">
+  <%= company.name %>
+  <%= company.year_founded %>
+  <%= company.location %>
+</div>
+<% end %>
+
 <br>
 
 <%= link_to 'New Company', new_company_path %>

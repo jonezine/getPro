@@ -3,6 +3,11 @@
  */
 $(document).ready( function(){
 
+    /*Alterar background da pagina welcome*/
+    var welcome = $('#welcometext');
+    welcome.parent().parent().css( 'height', '450px');
+    welcome.parent().parent().css( 'background', 'url("/assets/welcomeimage.jpg")');
+    welcome.hide().fadeIn('slow');
 
     /*Accao do botao login*/
     $('#loginform').hide();
@@ -13,7 +18,6 @@ $(document).ready( function(){
     });
     $('#login').mouseleave( function(){
         $('#loginform').slideUp('fast');
-
     });
 
 

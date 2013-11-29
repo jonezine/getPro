@@ -13,48 +13,53 @@
 <div id="header">
 
   <div id="subheader">
-    <a href="#">
+
+    <a href="/">
       <div id="applogo" class="subheadercontent">
         <h1 id="title" class="subheadercontent">getPRO!</h1>
       </div>
     </a>
 
-      <ul id="menu" class="subheadercontent">
-        <li class="menuli not_login"><%= link_to "Companies", companies_path %></li>
-        <li class="menuli" id="login">
-          <% if user_signed_in? %>
-              <%= current_user.email %>
-              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-          <% else %>
-              <%= link_to "Sign in", new_user_session_path %>
-          <% end %>
-          <form id="loginform">
-            <div id="loginformmain">
-              <div id="emailfield" class="loginformmaincontent">
-                <!--<label id="emaillabel">Email</label>-->
-                <input type="email" name="loginemail" id="loginemail" placeholder="Email">
-              </div>
-              <div id="passwordfield" class="loginformmaincontent">
-                <!--<label id="passwordlabel">Password</label>-->
-                <input type="password" name="loginpassword" id="loginpassword" placeholder="Password">
-              </div>
-              <div id="loginsubmit" class="loginformmaincontent">
-                <input class="button" id="loginbutton"      name="loginbutton"      value="Login"       type="submit">
-                <input class="button" id="registerbutton"   name="registerbutton"   value="Register"    type="submit">
-              </div>
+    <ul id="menu" class="subheadercontent">
+      <li class="menuli not_login"><%= link_to "Companies", companies_path %></li>
+      <li class="menuli" id="login">
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+        <div id="loginform">
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'button' %>
+        </div>
+      <% else %>
+        <a href="#">Login</a>
+        <div id="loginform">
+          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+            <div>
+              <%= f.email_field :email, :autofocus => true, :placeholder => 'Email' %>
+              <%= f.password_field :password, :placeholder => 'Password' %>
             </div>
-          </form>
-        </li>
-      </ul>
+            <div>
+            <% if devise_mapping.rememberable? -%>
+                <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+            <% end -%>
+            <%= f.submit "Login" %>
+            <%= link_to "Register",  '/users/sign_up', :class => 'button' %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      </li>
+    </ul>
 
   </div>
+
 </div>
 
 
 
 <div id="main">
   <div id="mainpage" class="maincontent">
-<%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
   </div>
 </div>
 
@@ -76,7 +81,6 @@
     <a id="footervalidator" href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="W3Validate"/></a>
   </div>
 </div>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
 </body>
 </html>
