@@ -1,4 +1,18 @@
 Getpro::Application.routes.draw do
+
+  root :to => 'static_pages#home'
+
+  get "static_pages/home"
+  get "static_pages/aboutus"
+
+  resources :languages
+
+  resources :employments
+
+  resources :skills
+
+  resources :projects
+
   resources :news
 
   resources :companies

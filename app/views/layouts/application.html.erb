@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Getpro</title>
+  <title>getPro - <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -38,7 +38,7 @@
     <div id="footerother" class="subfootercontent">
       <ul id="subfooterother">
         <li>More</li>
-        <li><a href="#">About Us</a></li>
+        <li><%= link_to( "About us" , "/static_pages/aboutus.html" )%></li>
       </ul>
     </div>
     <a id="footervalidator" class="subfootercontent" href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="W3Validate"/></a>
