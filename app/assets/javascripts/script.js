@@ -7,7 +7,7 @@ $(document).ready( function(){
     var welcome = $('#welcometext');
     welcome.parent().parent().css( 'height', '450px');
     welcome.parent().parent().css( 'background', 'url("/assets/welcomeimage.jpg")');
-    welcome.hide().fadeIn('slow');
+    welcome.hide().fadeIn(1500);
 
     /*Accao do botao login*/
     $('#loginform').hide();
