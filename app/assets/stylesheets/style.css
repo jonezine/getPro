@@ -105,7 +105,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .menuli > a{
     color: white;
     text-decoration: none;
-    padding: 20px 10px;
+    padding: 30px 10px;
 }
 
 #login{
@@ -123,11 +123,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     margin: auto;
     padding: 10px;
     background: #477000 url(/assets/background.png);
-    line-height: 20px;
+    line-height: 30px;
     position: absolute;
     right: 0%;
     font-weight: normal;
-    width: 350px;
+    width: 1000px;
 }
 
 
