@@ -1,20 +1,40 @@
 <% provide(:title, 'Users')%>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1 id="pagetitle">
+
   <%= @user.name %>
+</h1>
+
+<p>
+  <strong>birth date</strong>
+  <%= @user.birth_date%>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong>age </strong>
+  <%= Date.current.year() - @user.birth_date.year()%>
+</p>
+
+<p>
+  <strong>country</strong>
+  <%= @user.country %>
+</p>
+
+<p>
+  <strong>gender</strong>
+  <%= @user.gender%>
+</p>
+
+<p>
+  <strong>e-mail</strong>
   <%= @user.email %>
 </p>
 
+
+<h4>Personal Summary</h4>
 <p>
-  <strong>Summary:</strong>
   <%= @user.summary %>
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user), :class => "button" %>
-<%= link_to 'Back', users_path, :class => "button" %>
+<br>
+<%= link_to 'Edit Profile', edit_user_path(@user), :class => "button" %>
