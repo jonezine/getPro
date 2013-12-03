@@ -104,7 +104,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transition: 0.2s;
 }
 
-.menuli:hover{
+.menuli:hover, .selected{
 
     background: rgba(0, 55, 0, 0.15);
 }
@@ -190,6 +190,21 @@ table, tbody, thead, th, td{ padding: 5px; }
 
 #user_summary{ width: 400px; height: 100px; }
 
+.profileitem{
+    background: white;
+    border: 1px solid silver;
+    border-left: #5C9101 solid 3px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.20);
+    padding: 0 5px;
+    margin: 5px;
+    width:450px;
+    display: inline-block;
+}
+.profileitem p{ line-height:4px;}
+
+.profileitem_options{float:right;}
+
 /*FOOTER---------------------------------------------------------------------------------------------------------------*/
 #footer{
     clear: both;
@@ -207,7 +222,6 @@ table, tbody, thead, th, td{ padding: 5px; }
     color: dimgrey;
     padding: 5px 10px;
     border-left: #5C9101 solid 3px;
-    /*border-left: rgba(92, 145, 1, 0.60) solid 5px;*/
     border-radius: 5px;
 }
 

@@ -12,14 +12,15 @@ $(document).ready( function(){
 
     /*Accao do botao login*/
     $('#loginform').hide();
+    $('#loginform').css('text-align','center');
     $('#login').click( function(){
-        $('#loginform').slideDown('fast');
-        $(this).css("text-align","center") ;
+        $('#loginform').slideDown();
+    });
+    $('#loginform').mouseleave( function(){
+        $('#loginform').slideUp();
+    });
 
-    });
-    $('#login').mouseleave( function(){
-        $('#loginform').slideUp('fast');
-    });
+
 
     /*Texto Notice ex:User password failed*/
     var notice = $('.notice');

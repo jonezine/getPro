@@ -1,32 +1,23 @@
 <h1 id="pagetitle" >Listing Companies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Year founded</th>
-      <th>Location</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.description %></td>
-        <td><%= company.year_founded %></td>
-        <td><%= company.location %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @companies.each do |company| %>
+
+<a href="<%= company_path(company) %>">
+    <div class="profileitem">
+        <div class="profileitem_description">
+          <p><strong><%= company.name %></strong></p>
+          <p><%= company.year_founded %></p>
+          <p><%= company.location %></p>
+        </div>
+        <div class="profileitem_options">
+
+        </div>
+    </div>
+</a>
+
+
+<% end %>
 
 <br>
 
