@@ -1,5 +1,11 @@
 Getpro::Application.routes.draw do
 
+  get "user_companies/new"
+  get "user_friends/new"
+  get "user_languages/new"
+  get "user_employments/new"
+  get "user_skills/new"
+  get "user_projects/new"
   resources :messages
 
   devise_for :users

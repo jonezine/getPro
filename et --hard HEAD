@@ -1,0 +1,101 @@
+[33mcommit 707fab4b7357fc8e5b1cd022d6ea668baa3f3264[m
+Author: jonezine <jonezine@msn.com>
+Date:   Wed Dec 4 17:49:51 2013 +0000
+
+    Login bug repair
+
+[33mcommit 003be2c90e45971166a5392339567976c0a8f73b[m
+Author: jonezine <jonezine@msn.com>
+Date:   Wed Dec 4 03:46:55 2013 +0000
+
+    Home page with messages
+
+[33mcommit 60e6308642d991e6841ecd3ae93114fa5e643f83[m
+Author: jonezine <jonezine@msn.com>
+Date:   Tue Dec 3 00:48:26 2013 +0000
+
+    Layout for Listing Users and Companies
+
+[33mcommit 46d8a5ef48ba4f8585f0755bbbef67065e0fe934[m
+Author: jonezine <jonezine@msn.com>
+Date:   Mon Dec 2 14:52:39 2013 +0000
+
+    Add name to Devise
+
+[33mcommit 1fb6310ac9e14ba1bd5238c3a2a2856b940fc988[m
+Author: jonezine <jonezine@msn.com>
+Date:   Mon Dec 2 07:25:52 2013 +0000
+
+    Contact and Companies Links. Small changes.
+
+[33mcommit 6279107d9e030685ae68a04340a4042bc7a64152[m
+Author: jonezine <jonezine@msn.com>
+Date:   Mon Dec 2 01:27:13 2013 +0000
+
+    Users Table updated. Layout ũpdated
+
+[33mcommit 4f2e45d255ba5396e8b20fbbabf839a41610be8f[m
+Author: jonezine <jonezine@msn.com>
+Date:   Mon Dec 2 01:25:16 2013 +0000
+
+    User table updated. Layout Updated.
+
+[33mcommit 414a852a82aefaf1274a29c1477b433b7b68da11[m
+Author: jonezine <jonezine@msn.com>
+Date:   Sun Dec 1 15:53:42 2013 +0000
+
+    Small bug
+
+[33mcommit a54c4b2d5423b9bf683655210298e91f02d96177[m
+Author: jonezine <jonezine@msn.com>
+Date:   Sat Nov 30 02:28:24 2013 +0000
+
+    merging
+
+[33mcommit ff59aa677e212cbeffd711d2106aa9a30363e085[m
+Author: jonezine <jonezine@msn.com>
+Date:   Fri Nov 29 23:41:42 2013 +0000
+
+    Small bug
+
+[33mcommit 9daf57886bfea14e37c1a6820d661d4d31001c56[m
+Author: jonezine <jonezine@msn.com>
+Date:   Fri Nov 29 23:10:22 2013 +0000
+
+    Menu Done and Small changes
+
+[33mcommit 59f63517dfef11f6474fc5356bd236dd5596f098[m
+Author: jonezine <jonezine@msn.com>
+Date:   Fri Nov 29 16:44:46 2013 +0000
+
+    Login Devise
+
+[33mcommit 694fcca256df8e5dd95015f496fe3af4c1dce4c2[m
+Author: jonezine <jonezine@msn.com>
+Date:   Fri Nov 29 01:11:31 2013 +0000
+
+    Header and Footer Done, Css format
+
+[33mcommit 1fdf070ce7d8e7bcd870ac419e7b81d20331e7cb[m
+Author: jonezine <jonezine@msn.com>
+Date:   Thu Nov 28 17:24:30 2013 +0000
+
+    before adding new models projects, skills, emplyments, languages
+
+[33mcommit 980decf6814611fea78a110783b3735d45794c7c[m
+Author: jonezine <jonezine@msn.com>
+Date:   Thu Nov 28 01:56:50 2013 +0000
+
+    Header and Footer Done, Css format
+
+[33mcommit 0e9b924fc1342d8d3d553f635798f573136d597c[m
+Author: jonezine <jonezine@msn.com>
+Date:   Wed Nov 27 17:40:35 2013 +0000
+
+    Modeling Users, News e Companies
+
+[33mcommit 8862b3fc2b013f31d7cc5bbf60303eeec9c46b54[m
+Author: jonezine <jonezine@msn.com>
+Date:   Tue Nov 26 02:39:23 2013 +0000
+
+    first commit
