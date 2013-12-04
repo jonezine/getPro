@@ -193,17 +193,21 @@ table, tbody, thead, th, td{ padding: 5px; }
 .profileitem{
     background: white;
     border: 1px solid silver;
-    border-left: #5C9101 solid 3px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.20);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
     padding: 0 5px;
     margin: 5px;
-    width:450px;
-    display: inline-block;
 }
 .profileitem p{ line-height:4px;}
 
-.profileitem_options{float:right;}
+.profileitem_options, .comunicationitem_options{ float:right; }
+
+.comunicationitem{
+    border-top: 1px silver solid;
+    margin: 10px;
+    padding: 20px;
+}
+
+
 
 /*FOOTER---------------------------------------------------------------------------------------------------------------*/
 #footer{

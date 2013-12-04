@@ -1,0 +1,28 @@
+<% provide(:title, 'Home')%>
+
+
+<%= form_for(Message.new()) do |f| %>
+    <%= f.text_field :title, :placeholder=>'Title'%>
+    <br>
+    <%= f.text_field :content, :placeholder=>'Write...'%>
+    <br>
+    <%= f.hidden_field :user_id %>
+    <%= f.submit %>
+
+<% end %>
+
+<h1 id="pagetitle">Announcements</h1>
+
+<% @messages.each do |message| %>
+<div class="comunicationitem">
+      <div>
+      <h4><%= message.title %> <em>from <% message.user_id%></em></h4>
+      <%= message.image %>
+      <p><%= message.content %></p>
+      </div>
+      <div class="comunicationitem_options">
+      <%= link_to 'Edit', edit_message_path(message), :class => 'button' %>
+      <%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %>
+      </div>
+</div>
+<% end %>

@@ -5,11 +5,9 @@ Getpro::Application.routes.draw do
   devise_for :users
 
   root 'static_pages#welcome'
-
-  #get "static_pages/welcome"
-
-  #get "static_pages/aboutus"
   match'/about', to: 'static_pages#aboutus', via: 'get'
+
+  match'/home', to: 'home_page#home', via: 'get'
 
   resources :languages
 
