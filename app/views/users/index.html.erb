@@ -3,13 +3,13 @@
 
 
 <% @users.each do |user| %>
-  <a href="<%= user_path(user) %>">
+
     <div class="profileitem">
       <div class="profileitem_image">
 
       </div>
       <div class="profileitem_description">
-        <p><strong><%= user.name %></strong></p>
+        <p><strong><%= link_to user.name, user_path(user) %></strong></p>
         <p><%= user.email %></p>
         <p><%= user.country %></p>
       </div>
@@ -17,7 +17,7 @@
 
       </div>
     </div>
-  </a>
+
 <% end %>
 
 

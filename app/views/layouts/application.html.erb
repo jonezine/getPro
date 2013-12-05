@@ -33,9 +33,12 @@
 
         <%= current_user.name %>
         <div id="loginform">
-          <%= link_to "View Profile", user_path(current_user), :class => 'button'%><br>
-          <%= link_to "Edit Profile", edit_user_path(current_user), :class => 'button' %><br>
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'button'%>
+          <ul id="loginformmenu">
+            <li>Menu</li><br>
+            <li><%= link_to "View Profile", user_path(current_user)%><li><br>
+            <li><%= link_to "Edit Profile", edit_user_path(current_user)%><li><br>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%><li><br>
+          </ul>
         </div>
       <% else %>
         Login

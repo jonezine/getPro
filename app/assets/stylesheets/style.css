@@ -123,13 +123,18 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 #loginform{
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.40);
     background: #477000 ;
-    line-height: 40px;
+    line-height: 50px;
     position: absolute;
     right: 0%;
     font-weight: normal;
+    border-radius: 70px 0px;
     border-bottom: 5px rgb(106, 160, 1) solid;
-    padding: 15px 20px 0;
+    padding: 20px 40px 5px;
 }
+#loginformmenu{ font-weight: bold; color:white;}
+#loginformmenu a{ color: white ; text-decoration: none; font-weight: normal; }
+#loginformmenu a:hover{ color:#6aa001;}
+
 
 
 /*MAINPAGE-------------------------------------------------------------------------------------------------------------*/
@@ -160,8 +165,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .button, input[type="submit"]{
-    padding: 5px 10px;
-    border: 1px solid transparent;
+    padding: 4px 10px;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
     font-family:  'proxima-nova' , sans-serif;
     font-size: 100%;
@@ -172,6 +176,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transition: 0.2s;
     cursor: pointer;
 }
+input[type="submit"]{border: 1px solid transparent;}
 .button:hover, input[type="submit"]:hover{ background: #5e8c00; }
 
 a.button{ color:white; text-decoration: none; }
