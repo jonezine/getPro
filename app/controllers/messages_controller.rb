@@ -1,6 +1,9 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!
+
   # GET /messages
   # GET /messages.json
   def index
@@ -59,6 +62,7 @@ class MessagesController < ApplicationController
       format.html { redirect_to messages_url }
       format.json { head :no_content }
     end
+
   end
 
   private

@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   #Add atributes to Devise controller
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(resource)
+
+  end
+
   protected
 
   def configure_permitted_parameters

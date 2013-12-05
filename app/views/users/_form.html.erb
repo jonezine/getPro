@@ -39,7 +39,14 @@
     <%= f.label :summary %><br>
     <%= f.text_field :summary %>
   </div>
+  <div>
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails" class="button">Change Avatar</a>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+
 <% end %>

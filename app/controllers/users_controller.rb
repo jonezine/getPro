@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!
+
   # GET /users
   # GET /users.json
   def index

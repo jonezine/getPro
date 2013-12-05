@@ -30,6 +30,7 @@
       <li class="menuli not_login"><%= link_to "Companies", companies_path %></li>
       <li class="menuli" id="login">
       <% if user_signed_in? %>
+
         <%= link_to  current_user.name, '#' %>
         <div id="loginform">
           <%= link_to "View Profile", user_path(current_user), :class=>'button'%>

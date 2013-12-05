@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!
+
   # GET /projects
   # GET /projects.json
   def index

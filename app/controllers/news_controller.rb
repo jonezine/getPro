@@ -1,6 +1,9 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!
+
   # GET /news
   # GET /news.json
   def index

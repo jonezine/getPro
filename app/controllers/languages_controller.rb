@@ -1,6 +1,9 @@
 class LanguagesController < ApplicationController
   before_action :set_language, only: [:show, :edit, :update, :destroy]
 
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!
+
   # GET /languages
   # GET /languages.json
   def index

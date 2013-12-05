@@ -1,12 +1,12 @@
 <% provide(:title, 'Home')%>
 
 
-<%= form_for(Message.new()) do |f| %>
+<%= form_for Message.new() do |f| %>
     <%= f.text_field :title, :placeholder=>'Title'%>
     <br>
     <%= f.text_field :content, :placeholder=>'Write...'%>
     <br>
-    <%= f.hidden_field :user_id %>
+
     <%= f.submit %>
 
 <% end %>

@@ -1,12 +1,17 @@
 class HomePageController < ApplicationController
+
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!
+
   def home
     @messages = Message.all
     @companies = Company.all
+    @users = User.all
   end
 
   def create
     @message = Message.new(message_params)
-
+    redirect_to home
   end
 
   private
@@ -19,4 +24,5 @@ class HomePageController < ApplicationController
   def message_params
     params.require(:message).permit(:title,:content,:user_id,:image)
   end
+
 end
