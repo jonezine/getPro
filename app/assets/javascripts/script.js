@@ -14,9 +14,15 @@ $(document).ready( function(){
     $('#loginform').hide();
     $('#loginform').css('text-align','center');
     $('#login').click( function(){
-        $('#loginform').slideDown();
+        $('.not_login').hide();
+        $(this).css('background', '#477000');
+        $(this).css('padding', '0 40px');
+        $('#loginform').delay(300).slideDown();
     });
     $('#loginform').mouseleave( function(){
+        $('.not_login').show();
+        $('#login').css('padding', '0 10px');
+        $('#login').css('background', '#6aa001');
         $('#loginform').slideUp();
     });
 

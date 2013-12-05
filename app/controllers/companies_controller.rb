@@ -1,6 +1,9 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
+  #Apenas tem acesso quem estiver logedin.
+  before_filter :authenticate_user!, :only => [:edit, :update, :destroy, :new]
+
   # GET /companies
   # GET /companies.json
   def index

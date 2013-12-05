@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   #Apenas tem acesso quem estiver logedin.
   before_filter :authenticate_user!
 
+  #Apenas o proprio pode alterar os seus dados
+  before_filter :correct_user , :only => [:edit, :update]
+
+
   # GET /users
   # GET /users.json
   def index
@@ -73,5 +77,10 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name,:country, :gender, :email, :birth_date, :summary)
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(users_url) unless @user == current_user
     end
 end
