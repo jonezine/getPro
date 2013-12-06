@@ -6,7 +6,7 @@
 
     </div>
     <div>
-        <%= form_for current_user.messages.build do |f| %>
+        <%= form_for @message do |f| %>
             <%= f.text_field :title, :placeholder=>'Title'%>
             <br>
             <%= f.text_area :content, :placeholder=>'Write...'%>
@@ -14,6 +14,7 @@
             <%= f.file_field :image%>
             <br>
             <br>
+          <%= f.hidden_field :user_id%>
             <%= f.submit %>
         <% end %>
     </div>

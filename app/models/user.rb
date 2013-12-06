@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :messages, dependent: :destroy
   has_many :user_companies
+  has_many :companies, :through => :user_companies
   has_many :user_friends
   has_many :user_languages
   has_many :user_skills
