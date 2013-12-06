@@ -1,6 +1,6 @@
 class CreateMessages < ActiveRecord::Migration
   def change
-    drop_table :messages
+
     create_table :messages do |t|
       t.string :title
       t.string :image
