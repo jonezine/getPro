@@ -1,19 +1,26 @@
 <% provide(:title, 'Companies')%>
-<h1 id="pagetitle" >Listing Companies</h1>
+<h1>All Companies</h1>
 
 
 <% @companies.each do |company| %>
 
 <a href="<%= company_path(company) %>">
     <div class="profileitem">
-        <div class="profileitem_description">
+        <div class="profileitem_image profileitemcontent">
+
+        </div>
+        <div class="profileitem_description profileitemcontent">
           <p><strong><%= company.name %></strong></p>
           <p><%= company.year_founded %></p>
           <p><%= company.location %></p>
         </div>
-        <div class="profileitem_options">
 
-        </div>
+        <%if user_signed_in?%>
+            <div class="profileitem_options profileitemcontent">
+                <p><%= link_to "Follow", "#"%></p>
+            </div>
+        <% end %>
+
     </div>
 </a>
 
@@ -22,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Company', new_company_path %>
+<%= link_to 'New Company', new_company_path, :class => 'button' %>

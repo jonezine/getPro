@@ -27,7 +27,7 @@ a:hover{ color: #5C9101; background: none; }
 
 /*Set de default font-family size and background to the document*/
 body{
-
+    color: dimgrey;
     font-family: 'proxima-nova', sans-serif;
     font-size: 115%;
     background: whitesmoke url("/assets/background.png");
@@ -113,10 +113,12 @@ input[type="radio"]{ display: inline;}
     font-weight: bold;
     padding: 0 10px;
     transition: 0.2s;
+
 }
 
 .menuli:hover, .selected{
     background: rgba(0, 55, 0, 0.15);
+
 }
 
 .menuli > a{
@@ -134,7 +136,8 @@ input[type="radio"]{ display: inline;}
 #login img {
   float: left;
   border: 1px solid lightgrey;
-  margin: 20px 10px 20px 0px;
+  margin: 20px 10px 20px 5px;
+  border-radius: 15px 0 15px 0;
 }
 
 #loginform{
@@ -144,7 +147,7 @@ input[type="radio"]{ display: inline;}
     position: absolute;
     right: 0%;
     font-weight: normal;
-    border-radius: 70px 0px;
+    border-radius: 40px 0 70px 0px;
     border-bottom: 5px rgb(106, 160, 1) solid;
     padding: 20px 40px 5px;
 }
@@ -158,7 +161,7 @@ input[type="radio"]{ display: inline;}
 
 /*MAINPAGE-------------------------------------------------------------------------------------------------------------*/
 #main{
-    background: whitesmoke;
+    background: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30);
 
 }
@@ -193,6 +196,7 @@ input[type="radio"]{ display: inline;}
     /*font-weight: bold;*/
     transition: 0.2s;
     cursor: pointer;
+     border-radius: 10px 0 10px 0;
 }
 input[type="submit"]{border: 1px solid transparent;}
 .button:hover, input[type="submit"]:hover{ background: #5e8c00; }
@@ -209,11 +213,10 @@ table, tbody, thead, th, td{ padding: 5px; }
 }
 
 
-.profileitem img{
+.profileitem{
     background: white;
     border: 1px solid silver;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
-
     margin: 5px;
 }
 .profileitem p{ line-height:4px;}
@@ -253,9 +256,21 @@ table, tbody, thead, th, td{ padding: 5px; }
     color: dimgrey;
     padding: 5px 10px;
     border-left: #5C9101 solid 3px;
-    border-radius: 5px 0 0 20px;
+    border-radius: 3px 0 0 20px;
 }
 
 .subfootercontent a{ text-decoration: none; }
 
 #footervalidator{ float:right; line-height: 100px; margin: 0 20px;}
+
+
+
+
+
+/*ABOUT PAGE*/
+
+#abouttitle{ font-size: 350%; text-align: center;}
+#aboutmain{ width: 600px; margin:auto; text-align: justify; float: left;}
+#abouttie{float:right;}
+#developedby p{ text-align: center; font-size: 200%;}
+#group p{ text-align: center; font-size: 150%;}

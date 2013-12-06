@@ -6,7 +6,7 @@
   <%= @user.name %>
 </h1>
 
-<%= image_tag @user.avatar.url, :id => 'profileimage' %>
+<%= image_tag @user.avatar.url(:medium), :id => 'profileimage' %>
 
 <p>
   <strong>birth date</strong>

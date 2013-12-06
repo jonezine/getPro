@@ -10,6 +10,8 @@ $(document).ready( function(){
     welcome.parent().parent().css( 'height', '450px');
     welcome.hide().fadeIn(1500);
 
+
+
     /*Accao do botao login*/
     $('#loginform').hide();
     $('#loginform').css('text-align','center');

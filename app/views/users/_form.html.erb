@@ -47,7 +47,7 @@
 
   </div>
   <div class="field">
-    <%= f.label :avatar %>
+    <%= f.label :avatar %><br>
     <%= image_tag @user.avatar.url(:thumb) %>
     <%= f.file_field :avatar %>
   </div>
