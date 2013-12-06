@@ -15,7 +15,9 @@
 
 <p>
   <strong>age </strong>
+  <% if !@user.birth_date.nil? %>
   <%= Date.current.year() - @user.birth_date.year()%>
+  <% end %>
 </p>
 
 <p>

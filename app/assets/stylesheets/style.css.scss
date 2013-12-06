@@ -30,7 +30,7 @@ body{
     color: dimgrey;
     font-family: 'proxima-nova', sans-serif;
     font-size: 115%;
-    background: whitesmoke url("/assets/background.png");
+    background: whitesmoke url("/images/background.png");
 }
 
 /*Generic input format*/
@@ -65,7 +65,7 @@ input[type="radio"]{ display: inline;}
     position: relative; /*always see the header through the document*/
     top: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
-    background: #5C9101 url("/assets/background.png");
+    background: #5C9101 url("/images/background.png");
 }
 
 #subheader{
@@ -231,10 +231,12 @@ table, tbody, thead, th, td{ padding: 5px; }
 
 .pagination li{display:inline; padding:5px; margin: 5px;}
 
-.profileitem{ height: 80px;}
+.profileitem{ width: 480px; overflow:auto; display:inline-block; border-left: 3px solid #6aa001}
+.profileitem:hover{background: rgba(220, 255, 176, 0.60);}
 .profileitemcontent{ float:left; margin-right: 20px; }
 .profileitem_description{margin:0 20px;}
 .profileitem_image{margin:0;}
+.profileitem_image img{height:80px;}
 .profileitem_options{ float: right; }
 
 
