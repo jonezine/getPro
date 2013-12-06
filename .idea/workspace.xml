@@ -4,6 +4,8 @@
     <list default="true" id="0639ddf7-b49a-42c5-9cff-b5e05c0745ee" name="Default" comment="User table updated. Layout Updated.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/getpro.iml" afterPath="$PROJECT_DIR$/.idea/getpro.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="getpro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,6 +59,7 @@
     <file path="/scaffolds.css.scss" changelist="0639ddf7-b49a-42c5-9cff-b5e05c0745ee" time="1386216186109" ignored="false" />
     <file path="/style.css.scss" changelist="0639ddf7-b49a-42c5-9cff-b5e05c0745ee" time="1386310534426" ignored="false" />
     <file path="/sample_user_data.rake" changelist="0639ddf7-b49a-42c5-9cff-b5e05c0745ee" time="1386216788417" ignored="false" />
+    <file path="/Gemfile" changelist="0639ddf7-b49a-42c5-9cff-b5e05c0745ee" time="1386345972455" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +184,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="42" selection-start="959" selection-end="959" vertical-scroll-proportion="0.38297874">
+            <state line="40" column="38" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.44680852">
               <folding />
             </state>
           </provider>
@@ -921,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="42" selection-start="959" selection-end="959" vertical-scroll-proportion="0.38297874">
+        <state line="40" column="38" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.44680852">
           <folding />
         </state>
       </provider>
