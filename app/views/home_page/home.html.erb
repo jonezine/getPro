@@ -25,7 +25,7 @@
 <% @messages.each do |message| %>
 <div class="comunicationitem">
       <div>
-      <h4><%= message.title %> <em>from <% message.user_id%></em></h4>
+      <h4><%= message.title %> <em>from <%= message.user.name %></em></h4>
       <%= message.image %>
       <p><%= message.content %></p>
       </div>
