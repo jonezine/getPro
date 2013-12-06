@@ -1,12 +1,12 @@
 <% provide(:title, 'Home')%>
 
 
-<%= form_for Message.new() do |f| %>
+<%= form_for current_user.messages.build do |f| %>
     <%= f.text_field :title, :placeholder=>'Title'%>
     <br>
-    <%= f.text_field :content, :placeholder=>'Write...'%>
+    <%= f.text_area :content, :placeholder=>'Write...'%>
     <br>
-
+    <%= f.file_field :image%>
     <%= f.submit %>
 
 <% end %>

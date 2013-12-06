@@ -1,10 +1,12 @@
 <% provide(:title, 'Users')%>
 <p id="notice"><%= notice %></p>
 
-<%= gravatar_for @user %>
+
 <h1 id="pagetitle">
   <%= @user.name %>
 </h1>
+
+<%= image_tag @user.avatar.url, :id => 'profileimage' %>
 
 <p>
   <strong>birth date</strong>
@@ -55,8 +57,16 @@
 <h4>Projects</h4>
 <p> </p>
 
-<h4>Recent Messages</h4>
-<p> </p>
+<h4>Messages (<%= @user.messages.count %>)</h4>
+<div class="span8">
+  <% if @user.messages.any? %>
+
+      <ol class="microposts">
+        <%= render @messages %>
+      </ol>
+      <%= will_paginate @messages %>
+  <% end %>
+</div>
 
 <br>
 <%= link_to 'Edit Profile', edit_user_path(@user), :class => "button" %>

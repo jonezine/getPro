@@ -1,26 +1,27 @@
 <% provide(:title, 'Users')%>
 <h1 id="pagetitle">Listing Contacts</h1>
 
+<%= will_paginate %>
 
 <% @users.each do |user| %>
 
     <div class="profileitem">
-      <div class="profileitem_image">
-
+      <div class="profileitem_image profileitemcontent">
+        <%= image_tag user.avatar.url(:thumb) %>
       </div>
-      <div class="profileitem_description">
+      <div class="profileitem_description profileitemcontent">
         <p><strong><%= link_to user.name, user_path(user) %></strong></p>
         <p><%= user.email %></p>
         <p><%= user.country %></p>
       </div>
-      <div class="profileitem_options">
-
+      <div class="profileitem_options profileitemcontent">
+        <p><%= link_to "Add as Friend", "#"%></p>
+        <%= link_to "","#"%>
       </div>
     </div>
 
 <% end %>
 
-
-<br>
+<%= will_paginate %>
 
 

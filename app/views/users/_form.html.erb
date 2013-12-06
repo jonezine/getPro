@@ -27,7 +27,7 @@
   <div class="field">
     <%= f.label :gender %><br>
     <% [ 'male', 'female'].each do |gender| %>
-        <br><%=f.radio_button :gender, gender, checked: :gender %>
+        <%=f.radio_button :gender, gender, checked: :gender %>
         <%= gender.humanize %>
     <% end %>
   </div>
@@ -37,12 +37,21 @@
   </div>
   <div class="field">
     <%= f.label :summary %><br>
-    <%= f.text_field :summary %>
+    <%= f.text_area :summary %>
   </div>
-  <div>
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails" class="button">Change Avatar</a>
+  <div class="field">
+    <%= f.label :language %>
   </div>
+  <div class="field">
+      <%= f.label :projects %>
+
+  </div>
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= image_tag @user.avatar.url(:thumb) %>
+    <%= f.file_field :avatar %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

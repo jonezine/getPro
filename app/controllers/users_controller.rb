@@ -8,15 +8,19 @@ class UsersController < ApplicationController
   before_filter :correct_user , :only => [:edit, :update]
 
 
+
   # GET /users
   # GET /users.json
   def index
-    @users = User.all   #NOTA QUE USER E A ENTIDADE NA BASE DE DADOS .ALL MOSTRA TODOS!
+    #@users = User.all   #NOTA QUE USER E A ENTIDADE NA BASE DE DADOS .ALL MOSTRA TODOS!
+    @users = User.paginate(page: params[:page])
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+
+    @messages = @user.messages.all
   end
 
   # GET /users/new
@@ -32,7 +36,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    @languages = Language.all
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -47,6 +51,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @user.update( user_params )
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -76,7 +81,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name,:country, :gender, :email, :birth_date, :summary)
+      params.require(:user).permit(:avatar, :name,:country, :gender, :email, :birth_date, :summary)
     end
 
     def correct_user

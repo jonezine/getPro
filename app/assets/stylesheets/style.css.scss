@@ -34,7 +34,7 @@ body{
 }
 
 /*Generic input format*/
-input[type="text"], input[type="email"], input[type="password"]{
+input[type="text"], input[type="email"], input[type="password"], textarea{
     padding: 8px ;
     border: 1px solid silver;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
@@ -42,10 +42,21 @@ input[type="text"], input[type="email"], input[type="password"]{
     transition: 0.3s;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus{
 
     border: 1px solid #5C9101;
 }
+
+input[type="radio"]{ display: inline;}
+
+#user_birth_date_1i, #user_birth_date_2i, #user_birth_date_3i{
+  border: 1px solid silver;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
+  padding: 5px;
+}
+
+
+
 
 /*HEADER---------------------------------------------------------------------------------------------------------------*/
 #header{
@@ -120,6 +131,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 #login:hover{ background: #477000; }
 
+#login img {
+  float: left;
+  border: 1px solid lightgrey;
+  margin: 20px 10px 20px 0px;
+}
+
 #loginform{
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.40);
     background: #477000 ;
@@ -131,9 +148,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     border-bottom: 5px rgb(106, 160, 1) solid;
     padding: 20px 40px 5px;
 }
-#loginformmenu{ font-weight: bold; color:white;}
-#loginformmenu a{ color: white ; text-decoration: none; font-weight: normal; }
-#loginformmenu a:hover{ color:#6aa001;}
+.loginformmenu{ font-weight: bold; color:white; }
+.loginformmenu a{ color: white ; text-decoration: none; font-weight: normal; }
+.loginformmenu a:hover{ color:#6aa001;}
+#loginform li{ font-size: 115%;}
+#loginform li:first-child{ border-bottom:1px #6aa001 solid; padding: 5px; }
 
 
 
@@ -172,7 +191,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     background: #6aa001;
     color: white;
     /*font-weight: bold;*/
-    margin: 5px;
     transition: 0.2s;
     cursor: pointer;
 }
@@ -185,11 +203,17 @@ table, tbody, thead, th, td{ padding: 5px; }
 
 #user_summary{ width: 400px; height: 100px; }
 
-.profileitem{
+#profileimage{
+  float:right;
+  border: 1px lightgrey solid;
+}
+
+
+.profileitem img{
     background: white;
     border: 1px solid silver;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.20);
-    padding: 0 5px;
+
     margin: 5px;
 }
 .profileitem p{ line-height:4px;}
@@ -201,6 +225,14 @@ table, tbody, thead, th, td{ padding: 5px; }
     margin: 10px;
     padding: 20px;
 }
+
+.pagination li{display:inline; padding:5px; margin: 5px;}
+
+.profileitem{ height: 80px;}
+.profileitemcontent{ float:left; margin-right: 20px; }
+.profileitem_description{margin:0 20px;}
+.profileitem_image{margin:0;}
+.profileitem_options{ float: right; }
 
 
 
@@ -221,7 +253,7 @@ table, tbody, thead, th, td{ padding: 5px; }
     color: dimgrey;
     padding: 5px 10px;
     border-left: #5C9101 solid 3px;
-    /*border-radius: 5px;*/
+    border-radius: 5px 0 0 20px;
 }
 
 .subfootercontent a{ text-decoration: none; }

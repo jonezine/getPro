@@ -29,4 +29,7 @@ Getpro::Application.configure do
 
   #Devise stuff
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #PaperclipStuff
+  Paperclip.options[:command_path] = "/usr/bin/"
 end
