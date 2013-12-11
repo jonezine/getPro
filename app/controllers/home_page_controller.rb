@@ -8,6 +8,7 @@ class HomePageController < ApplicationController
     @companies = Company.all
     @users = User.all
     @message = Message.new(:user_id => current_user.id)
+    @news = News.all
   end
 
 end

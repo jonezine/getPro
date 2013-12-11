@@ -26,7 +26,9 @@
 <div class="comunicationitem">
       <div>
       <h4><%= message.title %> <em>from <%= message.user.name %></em></h4>
-      <%= message.image %>
+        <% if !message.image.blank? %>
+        <%= image_tag message.image.url %>
+        <%end%>
       <p><%= message.content %></p>
       </div>
       <div class="comunicationitem_options">
