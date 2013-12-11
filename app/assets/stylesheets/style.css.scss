@@ -170,6 +170,7 @@ input[type="radio"]{ display: inline;}
     width: 1000px;
     padding: 20px;
     margin: auto;
+  overflow: auto;
 }
 
 
@@ -209,7 +210,6 @@ table, tbody, thead, th, td{ padding: 5px; }
 
 #profileimage{
   float:right;
-  border: 1px lightgrey solid;
 }
 
 

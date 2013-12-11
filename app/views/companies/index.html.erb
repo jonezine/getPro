@@ -1,5 +1,5 @@
 <% provide(:title, 'Companies')%>
-<h1>All Companies</h1>
+<h1 id="pagetitle">Listing Companies</h1>
 
 
 <% @companies.each do |company| %>
@@ -7,7 +7,7 @@
 <a href="<%= company_path(company) %>">
     <div class="profileitem">
         <div class="profileitem_image profileitemcontent">
-
+          <%= image_tag company.image.url(:thumb) %>
         </div>
         <div class="profileitem_description profileitemcontent">
           <p><strong><%= company.name %></strong></p>

@@ -27,6 +27,11 @@
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
+  <div class="field">
+    <%= f.label :image%><br>
+    <%= image_tag @company.image.url(:thumb) %><br>
+    <%= f.file_field :image %>
+  </div>
   <div class="actions">
     <%= f.submit%>
   </div>
