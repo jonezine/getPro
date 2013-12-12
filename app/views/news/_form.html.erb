@@ -16,42 +16,17 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   </div>
-  <div class="field">
-    <%= f.label :rails %><br>
-    <%= f.text_field :rails %>
-  </div>
-  <div class="field">
-    <%= f.label :g %><br>
-    <%= f.text_field :g %>
-  </div>
-  <div class="field">
-    <%= f.label :scaffold %><br>
-    <%= f.text_field :scaffold %>
-  </div>
-  <div class="field">
-    <%= f.label :News %><br>
-    <%= f.text_field :News %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
+  <div>
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
+
+  <br>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit%>
   </div>
 <% end %>

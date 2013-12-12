@@ -6,6 +6,6 @@ class Company < ActiveRecord::Base
 
   has_many :projects
   has_many :news, dependent: :destroy
-  has_many :user_companies
+  has_many :users, :through => :user_companies
 
 end

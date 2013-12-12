@@ -2,6 +2,5 @@ class Employment < ActiveRecord::Base
 
   validates :employment, :presence => true
 
-  has_many :user_employments
-
+  has_many :users, :through => :user_employments
 end

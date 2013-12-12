@@ -175,12 +175,14 @@ input[type="radio"]{ display: inline;}
 
 
 #pagetitle{
+
     font-size: 200%;
     border-bottom: lightgray solid 1px;
     margin: 20px 0;
 }
 
 #welcometext{
+  color:black;
     text-align: center;
     font-size: 80px;
     font-weight: 300;
@@ -206,12 +208,11 @@ a.button{ color:white; text-decoration: none; }
 
 table, tbody, thead, th, td{ padding: 5px; }
 
-#user_summary{ width: 400px; height: 100px; }
+textarea{ width: 400px; height: 100px; }
 
 #profileimage{
   float:right;
 }
-
 
 .profileitem{
     background: white;

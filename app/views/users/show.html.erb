@@ -42,13 +42,25 @@
 </p>
 
 <h4>Languages</h4>
-<p> </p>
+<ul>
+  <% @user.languages.each do |l|%>
+   <li><%= l.language %></li>
+  <% end %>
+</ul>
 
 <h4>Employment</h4>
-<p> </p>
+<ul>
+  <% @user.employments.each do |e|%>
+      <li><%= e.employment %></li>
+  <% end %>
+</ul>
 
 <h4>Projects</h4>
-<p> </p>
+<ul>
+  <% @user.projects.each do |p|%>
+      <li><%= p.project %> from <%= p.company.name %></li>
+  <% end %>
+</ul>
 
 <h4>Current Occupation</h4>
 <p> </p>
@@ -56,18 +68,11 @@
 <h4>Previous Occupation</h4>
 <p> </p>
 
-<h4>Projects</h4>
-<p> </p>
 
 <h4>Messages (<%= @user.messages.count %>)</h4>
 <div class="span8">
   <% if @user.messages.any? %>
-
-      <ol class="microposts">
         <%= render @messages %>
-      </ol>
-
-
   <% end %>
 </div>
 

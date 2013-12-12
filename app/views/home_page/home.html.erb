@@ -25,7 +25,7 @@
 <% @messages.each do |message| %>
 <div class="comunicationitem">
       <div>
-      <h4><%= message.title %> <em>from <%= message.user.name %></em></h4>
+      <h4><%= message.title %> <em>from <%= message.user.name %></em><%= image_tag message.user.avatar(:small) %></h4>
         <% if !message.image.blank? %>
         <%= image_tag message.image.url %>
         <%end%>

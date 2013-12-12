@@ -1,0 +1,201 @@
+@media print{
+    body{
+        font-family: serif;
+        color: black;
+    }
+
+    a{ color: black; }
+
+    #header{
+        background: none;
+        box-shadow: none;
+
+    }
+    #searchbox{
+        display: none;
+    }
+
+    #mainpage{
+        box-shadow: none;
+        border: none;
+    }
+
+    #submenu{
+        box-shadow: none;
+        border: none;
+    }
+    #footer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 770px){
+
+    /*HEADER-----------------------------------------------------------------------------------------------------------*/
+    #header{
+        width: 100%;
+        height: 160px;
+        position: absolute;
+
+    }
+
+    #subheader{
+        width: 100%;
+    }
+
+
+    #searchbox{ display: none; }
+
+    #searchfield{ width: 60% }
+
+    #menu{
+        float: right;
+        clear:both;
+        width: 100%
+    }
+
+    .menuli{
+        text-align: center;
+    }
+
+    #login img{
+        display: none;
+
+    }
+
+    #applogo {
+        margin: auto;
+
+    }
+
+
+    /*MAINPAGE---------------------------------------------------------------------------------------------------------*/
+    #main{
+        width: 100%;
+        padding-top: 120px; /*this padding is here to compensate for head space*/
+        margin: auto;
+    }
+
+    .submenu{
+        clear: both;
+        width: 100%;
+        padding: 0;
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.10);
+    }
+
+    .subsubmenu{ padding: 20px; }
+
+    #subsubmenu{ padding: 20px; }
+
+    #submenutitle{
+        display: none;
+        font-size: 120%;
+        border-bottom: lightgray solid 1px;
+    }
+
+    #submenulist li{ display: inline; }
+
+    #mainpage{
+        clear: both;
+        width: 100%;
+        background: white;
+        padding: 0;
+        box-shadow: 0 5px 3px rgba(0, 0, 0, 0.20);
+    }
+
+    #aboutpage{ width: 100%}
+
+    #submainpage{ padding: 20px; }
+
+    .profilepreviewcontent{ margin: 5px 5px; }
+
+    /*.profilepreviewitem{ border: rgba(34, 139, 34, 0.31) solid 1px; }*/
+    /*FOOTER-----------------------------------------------------------------------------------------------------------*/
+    #footer{ font-size: 110%; width: 100%;}
+
+    #subfooter{ border-top: none; width: 100% }
+
+    .subfootercontent{ display: block; }
+}
+
+
+@media screen and (max-width: 360px){
+
+    #header{
+        position: absolute;
+        width: 100%;
+        height: 180px;
+    }
+
+    #subheader{
+        width: 100%;
+        height: 180px;
+        position: absolute;
+    }
+
+    #searchbox{
+        display:none;
+    }
+
+    #menu{
+        float: right;
+    }
+
+    .menuli{
+        float: left;
+        color: white;
+        display: block;
+        padding: 0 10px;
+    }
+
+    #login{
+        float: right;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    #login img{
+        display: none;
+    }
+
+    #applogo{
+        margin: auto;
+        width: 100%
+    }
+
+    /*MAINPAGE---------------------------------------------------------------------------------------------------------*/
+    #main{
+        width: 100%;
+        padding-top: 180px; /*this padding is here to compensate for head space*/
+        margin: auto;
+    }
+
+    #submainpage > img{
+         float: left;
+
+     }
+
+    /*FOOTER-----------------------------------------------------------------------------------------------------------*/
+    #footer{ font-size: 110%; }
+
+    #subfooter{ border-top: none; }
+
+    .subfootercontent{ display: block; }
+}
+
+@media screen and (max-width: 260px){
+
+    #header{
+        width: 260px;
+    }
+
+    #subheader{
+        width: 260px;
+    }
+
+    #main{
+        width: 260px; /*this padding is here to compensate for head space*/
+    }
+
+}

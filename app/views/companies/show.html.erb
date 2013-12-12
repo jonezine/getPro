@@ -23,6 +23,23 @@
   <%= @company.location %>
 </p>
 
+<% if @company.news.any? %>
+<div class="comunicationitem">
+  <div>
+    <h4><%= @company.news.title %></h4>
+    <% if !@company.news.image.blank? %>
+        <%= image_tag @company.image.url %>
+    <%end%>
+    <p><%= @company.content %></p>
+  </div>
+  <div class="comunicationitem_options">
+    <%= link_to 'Edit', edit_message_path(message), :class => 'button' %>
+    <%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %>
+  </div>
+</div>
+<% end %>
+
+
 <br>
 
 <%= link_to 'Edit', edit_company_path(@company), :class => 'button' %>

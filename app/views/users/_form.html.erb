@@ -40,7 +40,10 @@
     <%= f.text_area :summary %>
   </div>
   <div class="field">
-    <%= f.label :language %>
+
+
+    <%= f.select :languages, Language.all.collect{|l| [l.language, l.id.to_i]}  %>
+
   </div>
   <div class="field">
       <%= f.label :projects %>

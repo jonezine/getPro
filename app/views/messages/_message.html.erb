@@ -1,14 +1,9 @@
+<div class="comunicationitem">
 <p>
-  <strong>Title:</strong>
-  <%= message.title %>
+  <strong> <%= message.title %></strong>
 </p>
-
 <p>
-  <strong>Image:</strong>
-  <%= message.image %>
-</p>
-
-<p>
-  <strong>Content:</strong>
   <%= message.content %>
 </p>
+<p>Posted <%= message.created_at %></p>
+</div>
