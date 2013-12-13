@@ -5,8 +5,8 @@ $(document).ready( function(){
 
     /*Alterar background da pagina welcome e animaçao*/
     var welcome = $('#welcometext');
-    welcome.parent().parent().css( 'background-image', 'url("/images/welcomeimage.jpg")');
-    welcome.parent().parent().css( 'background-size', '110% auto');
+    welcome.parent().parent().parent().css( 'background-image', 'url("/images/welcomeimage.jpg")');
+    welcome.parent().parent().parent().css( 'background-size', '110% auto');
     welcome.parent().parent().css( 'height', '450px');
     welcome.hide().fadeIn(1500);
 

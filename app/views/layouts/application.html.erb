@@ -24,6 +24,18 @@
       </div>
     </a>
 
+    <div id="searchbox">
+      <% if user_signed_in? %>
+          <%= form_tag search_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :search, params[:search], :class => 'searchfield' %>
+                <%= submit_tag 'Search', :name => nil, :class => 'searchsubmit' %>
+              </p>
+          <% end %>
+      <% end %>
+    </div>
+
+
     <ul id="menu" class="subheadercontent">
       <% if user_signed_in? %>
           <li class="menuli not_login"><%= link_to "Contacts", users_path %></li>
@@ -82,6 +94,8 @@
 
   <div id="mainpage" class="maincontent">
     <div id="submainpage">
+
+
       <%= yield %>
     </div>
   </div>
@@ -90,6 +104,14 @@
 <!--FOOTER-->
 <div id="footer">
   <div id="subfooter">
+
+
+
+
+
+
+
+
     <div id="footerdaweb" class="subfootercontent">
       <ul id="subfootertitle">
         <li>Let´s Get Pro!</li>

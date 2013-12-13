@@ -99,6 +99,14 @@ input[type="radio"]{ display: inline;}
     background: rgba(0, 55, 0, 0.15);
 }
 
+#searchbox{
+  float:left;
+  line-height: 80px;
+  margin-left: 30px;
+  margin-top: 8px;
+}
+
+
 #menu > li{ font-size: 120% }
 
 #menu{
