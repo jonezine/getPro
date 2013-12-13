@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0639ddf7-b49a-42c5-9cff-b5e05c0745ee" name="Default" comment="User table updated. Layout Updated.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/messages/images/000/000/001/medium/introimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/messages/images/000/000/001/original/introimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/messages/images/000/000/001/thumb/introimage.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home_page/home.html.erb" afterPath="$PROJECT_DIR$/app/views/home_page/home.html.erb" />
     </list>
     <ignored path="getpro.iws" />
@@ -92,7 +95,7 @@
       <file leaf-file-name="home.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home_page/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="23" selection-start="914" selection-end="914" vertical-scroll-proportion="0.5095368">
+            <state line="33" column="44" selection-start="940" selection-end="940" vertical-scroll-proportion="0.59128064">
               <folding />
             </state>
           </provider>
@@ -896,7 +899,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home_page/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="23" selection-start="914" selection-end="914" vertical-scroll-proportion="0.5095368">
+        <state line="33" column="44" selection-start="940" selection-end="940" vertical-scroll-proportion="0.59128064">
           <folding />
         </state>
       </provider>
