@@ -13,6 +13,7 @@ Getpro::Application.routes.draw do
   root 'static_pages#welcome'
 
   match '/about', to: 'static_pages#aboutus', via: 'get'
+  match '/search', to: 'static_pages#search', via: 'get'
 
   match '/home', to: 'home_page#home', via: 'get'
 
