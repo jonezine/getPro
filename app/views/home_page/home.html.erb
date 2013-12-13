@@ -30,8 +30,10 @@
       <p><%= message.content %></p>
       </div>
       <div class="comunicationitem_options">
+      <% if message.user.id == current_user.id%>
       <%= link_to 'Edit', edit_message_path(message), :class => 'button' %>
       <%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %>
       </div>
+      <% end %>
 </div>
 <% end %>
