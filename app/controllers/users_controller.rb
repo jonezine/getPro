@@ -9,6 +9,8 @@ class UsersController < ApplicationController
 
 
 
+
+
   # GET /users
   # GET /users.json
   def index
@@ -70,6 +72,10 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+
+  def connections
+      @user = current_user
   end
 
   private

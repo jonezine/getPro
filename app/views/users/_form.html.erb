@@ -42,7 +42,8 @@
   <div class="field">
 
 
-    <%= f.select :languages, Language.all.collect{|l| [l.language, l.id.to_i]}  %>
+    <%= f.select :user_languages , Language.all.collect{|l| [l.language, l.id.to_i]}  %>
+
 
   </div>
   <div class="field">

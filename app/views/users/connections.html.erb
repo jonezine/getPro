@@ -1,0 +1,66 @@
+<% provide(:title, 'Connections')%>
+<p id="notice"><%= notice %></p>
+
+
+<h1 id="pagetitle">
+  <%= @user.name %>
+</h1>
+
+
+<h4>Requested Connections</h4>
+<% @user.friendships.each do |friendship| %>
+    <% if(friendship.status == "requested") %>
+        <% friend = User.find(friendship.friend_id) %>
+        <div class="profileitem">
+          <div class="profileitem_image profileitemcontent">
+            <%= image_tag friend.avatar.url(:thumb) %>
+          </div>
+          <div class="profileitem_description profileitemcontent">
+            <p><strong><%= link_to friend.name, user_path(friend) %></strong></p>
+            <p><%= friend.email %></p>
+            <p><%= friend.country %></p>
+          </div>
+        </div>
+        <div class="profileitem_options profileitemcontent">
+          <p><%= link_to "Accept", friendships_path(:user_id=> current_user.id, :friend_id=>friend, :status =>'accepted'), :method => :post%></p>
+          <%= link_to "","#"%>
+        </div>
+    <% end %>
+
+<% end %>
+
+<h4>Pending Connections</h4>
+<% @user.friendships.each do |friendship| %>
+    <% if(friendship.status == "pending") %>
+        <% friend = User.find(friendship.friend_id) %>
+        <div class="profileitem">
+          <div class="profileitem_image profileitemcontent">
+            <%= image_tag friend.avatar.url(:thumb) %>
+          </div>
+          <div class="profileitem_description profileitemcontent">
+            <p><strong><%= link_to friend.name, user_path(friend) %></strong></p>
+            <p><%= friend.email %></p>
+            <p><%= friend.country %></p>
+          </div>
+        </div>
+    <% end %>
+
+<% end %>
+
+<h4> My Connections</h4>
+<% @user.friendships.each do |friendship| %>
+    <% if(friendship.status == "accepted") %>
+    <% friend = User.find(friendship.friend_id) %>
+    <div class="profileitem">
+      <div class="profileitem_image profileitemcontent">
+        <%= image_tag friend.avatar.url(:thumb) %>
+      </div>
+      <div class="profileitem_description profileitemcontent">
+        <p><strong><%= link_to friend.name, user_path(friend) %></strong></p>
+        <p><%= friend.email %></p>
+        <p><%= friend.country %></p>
+      </div>
+    </div>
+    <% end %>
+
+<% end %>

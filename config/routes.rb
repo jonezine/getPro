@@ -1,5 +1,7 @@
 Getpro::Application.routes.draw do
 
+  resources :friendships
+
   get "user_companies/new"
   get "user_friends/new"
   get "user_languages/new"
@@ -15,6 +17,10 @@ Getpro::Application.routes.draw do
   match '/about', to: 'static_pages#aboutus', via: 'get'
 
   match '/home', to: 'home_page#home', via: 'get'
+
+  match 'user/:id/connections', to: 'users#connections', :as => :connections_user, via:'get'
+
+
 
   resources :languages
 
