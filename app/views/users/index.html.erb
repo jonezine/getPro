@@ -13,12 +13,33 @@
         <p><%= user.country %></p>
       </div>
       <% if user.id != current_user.id %>
+          <% linkto = "Send Connection Request" %>
+
+             <% if current_user.friendships.where(:friend_id => user.id).blank?
+                  linkto = "Send Connection Request"
+                else
+                  status = Friendship.where(:user_id => current_user.id, :friend_id  => user.id)
+                  if status[0].status == "pending"
+                    linkto = "Request Sent"
+                  else
+                    if status[0].status == "requested"
+                        linkto = "Request Received"
+                    else
+                        if status[0].status == "accepted"
+                          linkto = "Connected"
+                        end
+                    end
+                  end
+             %>
+             <% end %>
 
 
-      <div class="profileitem_options profileitemcontent">
-        <p><%= link_to "Add as Friend", friendships_path(:user_id=> current_user.id, :friend_id=>user.id, :status =>'pending'), :method => :post%></p>
-        <%= link_to "","#"%>
-      </div>
+            <div class="profileitem_options profileitemcontent">
+                <p><%= link_to linkto, friendships_path(:user_id=> current_user.id, :friend_id=>user.id, :status =>'pending'), :method => :post%></p>
+                <%= link_to "","#"%>
+            </div>
+
+
       <% end %>
     </div>
 

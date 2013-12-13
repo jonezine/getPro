@@ -42,12 +42,12 @@
   <div class="field">
 
 
-<<<<<<< HEAD
+
     <%= f.select :user_languages , Language.all.collect{|l| [l.language, l.id.to_i]}  %>
 
-=======
+
     <%= f.collection_select(:language_ids, Language.all.to_a.collect, :id, :language, {:prompt => "Please select language"} ) %>
->>>>>>> 5215207bf9e41f93ec59f9743dd44869aa9e2799
+
 
   </div>
   <div class="field">

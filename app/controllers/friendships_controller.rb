@@ -35,29 +35,30 @@ class FriendshipsController < ApplicationController
 
         respond_to do |format|
           if @friendship.save
-            format.html { redirect_to @friendship, notice: 'Your friendship request has been sent' }
+            format.html { redirect_to connections_user_path(current_user), notice: 'Your Connection Request has been sent' }
             format.json { render action: 'show', status: :created, location: @friendship }
           else
             format.html { render action: 'new' }
             format.json { render json: @friendship.errors, status: :unprocessable_entity }
           end
           if @friendship2.save
-            format.html { redirect_to @friendship2, notice: 'You received a friendship invitation' }
+            format.html { redirect_to @friendship2, notice: 'You received a Connection invitation' }
             format.json { render action: 'show', status: :created, location: @friendship2 }
           else
             format.html { render action: 'new' }
             format.json { render json: @friendship2.errors, status: :unprocessable_entity }
           end
         end
+
       else
         status = arefriends[0].status
         if status == "accepted"
           response = "Already friends"
         else
           if status == "pending"
-            response = "Friendship already requested by you"
+            response = "Connection already requested by you"
           else
-            response = "You'be been asked for that friendship"
+            response = "You'be been asked for that Connection"
           end
         end
         respond_to do |format|
@@ -65,7 +66,6 @@ class FriendshipsController < ApplicationController
           format.json { render json: arefriends[0].errors, status: :unprocessable_entity }
         end
       end
-
     else
       if params[:status] == "accepted"
         @friendship = Friendship.where(:user_id => params[:user_id], :friend_id  => params[:friend_id])
@@ -74,7 +74,7 @@ class FriendshipsController < ApplicationController
         @friendship2[0].status = "accepted"
         respond_to do |format|
           if @friendship[0].save
-            format.html { redirect_to @friendship[0], notice: 'Friendship accepted' }
+            format.html { redirect_to connections_user_path(current_user), notice: 'Connection accepted' }
             format.json { render action: 'show', status: :created, location: @friendship[0] }
           else
             format.html { render action: 'new' }
@@ -88,9 +88,32 @@ class FriendshipsController < ApplicationController
             format.json { render json: @friendship2[0].errors, status: :unprocessable_entity }
           end
         end
+      else
+        if params[:status] == "remove"
+          @friendship = Friendship.where(:user_id => params[:user_id], :friend_id => params[:friend_id])
+          @friendship[0].destroy
+          @friendship2 = Friendship.where(:user_id => params[:friend_id], :friend_id => params[:user_id])
+          @friendship2[0].destroy
+
+          respond_to do |format|
+            if @friendship[0].save
+              format.html { redirect_to connections_user_path(current_user), notice: 'Connection Removed' }
+              format.json { render action: 'show', status: :created, location: @friendship[0] }
+            else
+              format.html { render action: 'new' }
+              format.json { render json: @friendship[0].errors, status: :unprocessable_entity }
+            end
+            if @friendship2[0].save
+              format.html { redirect_to @friendship2[0], notice: 'A Connection has been removed' }
+              format.json { render action: 'show', status: :created, location: @friendship2[0] }
+            else
+              format.html { render action: 'new' }
+              format.json { render json: @friendship2[0].errors, status: :unprocessable_entity }
+            end
+          end
+        end
       end
     end
-
   end
 
   # PATCH/PUT /friendships/1
@@ -103,7 +126,7 @@ class FriendshipsController < ApplicationController
 
       respond_to do |format|
         if @friendship.save
-          format.html { redirect_to @friendship, notice: 'Your friendship request has been sent' }
+          format.html { redirect_to @friendship, notice: 'Your Connection Request has been sent' }
           format.json { render action: 'show', status: :created, location: @friendship }
         else
           format.html { render action: 'new' }

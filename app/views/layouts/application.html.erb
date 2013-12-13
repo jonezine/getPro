@@ -49,12 +49,17 @@
           <div class="loginformmenu">
             <ul>
               <li>Notifications</li>
-              <li><a>...</a></li>
+              <% requests = current_user.friendships.where(:status => "requested").count
+                 if requests > 0
+                    connections = "You have "+requests.to_s+" new request"%>
+                    <li><%= link_to connections, connections_user_path(current_user)%></li>
+                  <% end %>
 
             </ul>
           </div>
           <div class="loginformmenu">
               <ul>
+                <% requests = "My Connections (" + current_user.friendships.where(:status => "requested").count.to_s + ")"%>
                 <li>Menu</li><br>
                 <li><%= link_to "View My Profile", user_path(current_user)%><li><br>
                 <li><%= link_to "Edit My Profile", edit_user_path(current_user)%><li><br>
